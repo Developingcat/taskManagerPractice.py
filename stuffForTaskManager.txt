@@ -1,0 +1,39 @@
+
+Hold code, trying to simplify 
+
+# if option == 1: 
+        #     print("\n")
+        #     tasks = input("Please type the task you'd like to add: ") 
+        #     taskNumber.append(tasks)
+        #     print("Task successfully added into the list!")
+        #     return
+        # elif option == 2:
+        #     steps = input("Please add the steps for the task: ")
+        #     print(tasks)
+        #     stepsForTask.append(steps)
+        #     print("Steps added successfully! good luck with your tasks!")
+        #     return
+        # elif option == 3: 
+        #     choice = input("Would you like to add this task to completed? Please enter yes if yes, enter no if no: ")
+        #     if choice == True:
+        #         taskQuestion == input("What task would you like to add?: ")
+        #         completedTasks.append(taskQuestion)
+        #         print("Good luck with the rest of your tasks!")
+        #     else:
+        #         print("Good luck with your task!")
+        #         break
+        # elif option == 4: 
+        #     print("This is a test.")
+        # else: 
+        #     print("Please retry your entry!")
+        #     return
+
+        if option == 1: 
+            print("----------")
+            tasksIncrease = input("Please add the name of the task you'd wish to chart!: ") 
+            taskNumber.append(tasksIncrease)
+            print("Task successfully added into the list!")
+            return
+        else: 
+            print("I beleive something may have gone wrong, please try again.")
+            return 
