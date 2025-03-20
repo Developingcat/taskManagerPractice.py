@@ -28,7 +28,7 @@ def main():
     print("################################")
 
 
-    stepsForTask = [] 
+    stepsForTask = []
     taskTracking = []
     completedTasks = []
     taskNumber = []
@@ -78,12 +78,10 @@ def main():
             else: 
                 print("Good luck with your task!")
         elif option == 4: 
-            print("These are your tasks: {}".format(taskTracking))
+            print(f"These are your tasks: ", (taskTracking) )
         elif option == 5: 
             print(taskTracking)
             delete = input("Please select the task you would like to delete: ") 
-            delete = taskTracking.popitem()
-                
         elif option == 6: 
             print("This is a test.")
         elif option == 7: 
