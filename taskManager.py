@@ -31,7 +31,7 @@ def main():
     stepsForTask = []
     taskTracking = []
     completedTasks = []
-    taskNumber = []
+    taskNumber = [] 
 
     CATEGORY = { 'Completed' , 'Incomplete' }
 
@@ -53,37 +53,38 @@ def main():
         if option == 1: 
             print("\n")
             tasks = input("Please type the task you'd like to add: ") 
-            taskNumber.append(tasks)
             taskTracking.append(tasks)
             print("Task successfully added into the list!")
+            return
 
         elif option == 2:
             print(taskTracking)
             stepsQuestion = input("Please select the task you would like to place steps for: ")
-            if stepsQuestion in taskTracking: 
-                steps = input("Please input the steps you'd like to add: ") 
-                stepsForTask.append(steps)
-                print("Steps added successfully! Good luck!")
-            else: 
-                print("I believe you have misunderstood! Please try again!")
-                return
-
+            steps = input("Please input the steps you'd like to add: ") 
+            stepsForTask.append(steps)
+            print("Steps added successfully! Good luck!")
         elif option == 3: 
-            choice = input("Would you like to add this task to completed? Please enter yes if yes, enter no if no: ")
+            choice = input(f"Would you like to add this task to completed? Please enter yes if yes, enter no if no: ")
             if choice == True:
                 print(taskTracking)
-                taskQuestion = input("What task would you like to add?: ")
+                taskQuestion = input(f"What task would you like to add?: ")
                 completedTasks.append(taskQuestion)
                 print("Good luck with the rest!")
             else: 
                 print("Good luck with your task!")
+                return
         elif option == 4: 
-            print(f"These are your tasks: ", (taskTracking) )
+            print(f"These are your tasks: {taskTracking}")
+            return
         elif option == 5: 
             print(taskTracking)
-            delete = input("Please select the task you would like to delete: ") 
+            delete = input("Please select the task you would like to delete: ")
+            taskTracking.pop()
+            taskNumber.pop()
+            print("Task removed successfully!")
         elif option == 6: 
-            print("This is a test.")
+            taskNumber = len(taskTracking)
+            print(taskNumber)
         elif option == 7: 
             print("Thank you for using this program.")
             return
